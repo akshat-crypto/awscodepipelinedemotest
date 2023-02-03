@@ -23,10 +23,19 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ env.AWS_REGION }}
 
-    - name: Deploy to AWS CodePipeline
-      uses: aws-actions/codepipeline-github-action@v2
-      with:
-        pipeline-name: demoterraformtest
-        source-action: Source
-        build-action: Build
+    # - name: Deploy to AWS CodePipeline
+    #   uses: aws-actions/codepipeline-github-action@v2
+    #   with:
+    #     pipeline-name: demoterraformtest
+    #     source-action: Source
+    #     build-action: Build
         # deploy-action: Deploy
+
+    - name: Trigger Scraper Pipeline
+      uses: zulhfreelancer/aws-codepipeline-action@v1.0.7
+      # if: steps.scrapper-changed.outputs.changed == 'true'
+      with:
+        aws-region: "us-east-1"
+        aws-access-key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        pipeline-name: "demoterraformtest"
