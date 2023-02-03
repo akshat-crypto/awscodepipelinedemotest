@@ -31,7 +31,7 @@ jobs:
     #     build-action: Build
         # deploy-action: Deploy
 
-    - name: Trigger Scraper Pipeline
+    - name: Trigger demo Pipeline
       uses: zulhfreelancer/aws-codepipeline-action@v1.0.7
       # if: steps.scrapper-changed.outputs.changed == 'true'
       with:
