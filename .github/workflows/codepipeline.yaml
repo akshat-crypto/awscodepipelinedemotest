@@ -24,7 +24,7 @@ jobs:
         aws-region: ${{ env.AWS_REGION }}
 
     - name: Deploy to AWS CodePipeline
-      uses: aws-actions/codepipeline-github-action@v1
+      uses: aws-actions/codepipeline-github-action@v2
       with:
         pipeline-name: demoterraformtest
         source-action: Source
