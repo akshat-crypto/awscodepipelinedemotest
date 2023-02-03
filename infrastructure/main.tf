@@ -11,6 +11,6 @@ resource "aws_instance" "demo_instance" {
   ]
 
   tags = {
-    Name = "test amis"
+    Name = "test amis demo"
   }
 }
