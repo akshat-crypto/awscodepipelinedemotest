@@ -11,7 +11,9 @@ phases:
       - mv terraform /usr/local/bin/
   pre_build:
     commands:
+      - cd ./infrastructure/
       - terraform init
   build:
     commands:
+      - cd ./infrastructure/
       - terraform apply --auto-approve
