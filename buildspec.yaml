@@ -14,4 +14,4 @@ phases:
       - terraform init
   build:
     commands:
-      - terraform apply -auto-approve
+      - terraform apply --auto-approve
