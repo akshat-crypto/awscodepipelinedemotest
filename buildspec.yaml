@@ -9,12 +9,12 @@ phases:
       - "wget https://releases.hashicorp.com/terraform/1.3.7/terraform_1.3.7_linux_amd64.zip"
       - "unzip terraform_1.3.7_linux_amd64.zip"
       - mv terraform /usr/local/bin/
-      - cd ./infrastructure/
-      - terraform destroy --auto-approve
+      
   pre_build:
     commands:
-      
+      - cd ./infrastructure/
       - terraform init
+      - terraform destroy --auto-approve
   build:
     commands:
       - terraform apply --auto-approve
