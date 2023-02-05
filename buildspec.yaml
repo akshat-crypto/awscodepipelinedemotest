@@ -14,10 +14,8 @@ phases:
     commands:
       - cd ./infrastructure/
       - terraform init
-      
   build:
     commands:
-      - terraform destroy --auto-approve
       - terraform apply --auto-approve
   post_build:
     commands:
