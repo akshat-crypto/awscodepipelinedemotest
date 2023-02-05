@@ -10,7 +10,7 @@ resource "aws_instance" "demo_instance" {
     "sg-ec0d498e"
   ]
 
-  tags = {
-    Name = "test amis demo"
-  }
+  # tags = {
+  #   Name = "test amis demo"
+  # }
 }
