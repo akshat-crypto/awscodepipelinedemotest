@@ -13,10 +13,10 @@ resource "aws_s3_bucket_versioning" "versioning_moderndatastack" {
   }
 }
 
-resource "aws_s3_object" "moderndatastackupload" {
-  for_each = fileset("../s3obj/", "**")
-  bucket = aws_s3_bucket.moderndatastack.id
-  key = each.value
-  source = "../s3obj/${each.value}"
-  etag = filemd5("../s3obj/${each.value}")
-}
+# resource "aws_s3_object" "moderndatastackupload" {
+#   for_each = fileset("../s3obj/", "**")
+#   bucket = aws_s3_bucket.moderndatastack.id
+#   key = each.value
+#   source = "../s3obj/${each.value}"
+#   etag = filemd5("../s3obj/${each.value}")
+# }
