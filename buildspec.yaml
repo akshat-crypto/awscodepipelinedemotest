@@ -16,3 +16,6 @@ phases:
   build:
     commands:
       - terraform apply --auto-approve
+  post_build:
+    commands:
+      - aws s3 cp s3obj/ s3://mdsprivate911 --recursive

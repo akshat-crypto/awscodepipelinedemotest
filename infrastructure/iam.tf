@@ -43,6 +43,6 @@ resource "aws_iam_role_policy_attachment" "s3_full_access_attachment" {
 }
 
 resource "aws_iam_instance_profile" "s3_full_access_profile" {
-  name = "s3_demo_access_profile"
+  name = "s3_demo_access_profile_temp"
   role = aws_iam_role.s3_full_access_role.name
 }
