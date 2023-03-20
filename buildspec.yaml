@@ -22,4 +22,4 @@ phases:
       - ls
       - cd ..
       - ls
-      - aws s3 cp s3obj/ s3://mdsprivate911 --recursive
+      # - aws s3 cp s3obj/ s3://mdsprivate911 --recursive
